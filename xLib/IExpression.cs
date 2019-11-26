@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace xLib
 {
-    interface Notation
+    interface IExpression
     {
-        public string arrange(string op, string operand1, string operand2);
+        double evaluate(double x);
+        IExpression derive();
+        string toString(INotation ntn);
     }
 }

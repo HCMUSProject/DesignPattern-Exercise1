@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>3e9a52b1-c8c3-4bba-98bc-5c6c137a7e5d</ProjectGuid>
+    <ProjectGuid>{76E0A335-64D5-41F7-9991-2E4151DD3EFB}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>xLib</RootNamespace>
@@ -41,6 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddExp.cs" />
+    <Compile Include="BinaryExp.cs" />
+    <Compile Include="ConstExp.cs" />
+    <Compile Include="DivEpx.cs" />
+    <Compile Include="IExpression.cs" />
+    <Compile Include="InfixNotation.cs" />
+    <Compile Include="MonomialExp.cs" />
+    <Compile Include="INotation.cs" />
+    <Compile Include="MulExp.cs" />
+    <Compile Include="PosfixNotation.cs" />
+    <Compile Include="PrefixNotation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
