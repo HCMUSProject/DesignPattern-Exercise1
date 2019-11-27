@@ -16,7 +16,13 @@ namespace xLib
 
         public override IExpression derive()
         {
-            return new DivExp(this.exp1.derive(), this.exp2.derive());
+            return new DivExp(
+                new AddExp(
+                    new MulExp(this.exp1.derive(), this.exp2), 
+                    new MulExp(
+                        new ConstExp(-1), 
+                        new MulExp(this.exp1, this.exp2.derive()))), 
+                new MulExp(this.exp2, this.exp2));
         }
 
         protected override double doEvaluate(double val1, double val2)

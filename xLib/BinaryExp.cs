@@ -27,8 +27,6 @@ namespace xLib
 
         public string toString(INotation ntn)
         {
-            if ( this.getOperator() == "/" && this.exp2.toString(ntn) == "0")
-                throw new Exception("Division by zero.");
             return ntn.arrange(this.getOperator(), this.exp1.toString(ntn), this.exp2.toString(ntn));
         }
 

@@ -12,8 +12,9 @@ namespace xLib
         {
             try
             {
-                IExpression exp = new DivExp(new ConstExp(0), MonomialExp.createInstance(3, 0));
-                //IExpression exp = new DivExp(new MulExp(new ConstExp(10), MonomialExp.createInstance(3,0)),new AddExp(new MulExp(MonomialExp.createInstance(5,2), new ConstExp(4)), MonomialExp.createInstance(3, 2)));
+                //IExpression exp = new DivExp(new ConstExp(0), MonomialExp.createInstance(3, 0));
+                IExpression exp = new DivExp(new MulExp(new ConstExp(10), MonomialExp.createInstance(3,0)),new AddExp(new MulExp(MonomialExp.createInstance(5,2), new ConstExp(4)), MonomialExp.createInstance(3, 2)));
+                //IExpression exp = new DivExp(MonomialExp.createInstance(3, 2), new ConstExp(-2));
                 double eValue = exp.evaluate(3);
                 Console.WriteLine("Value:");
                 Console.WriteLine("The value of expression when x = 3 : {0}", eValue);
